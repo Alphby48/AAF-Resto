@@ -134,7 +134,7 @@ resto-item {
 .kata-salah {
   color: white;
 }
-footer {
+foot-resto {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -144,25 +144,25 @@ footer {
   background-color: aqua;
   padding: 1rem 0;
 }
-footer .footicon {
+foot-resto .footicon {
   width: 30%;
   display: flex;
   justify-content: space-around;
   text-decoration: none;
   list-style: none;
 }
-footer .footicon li a i {
+foot-resto .footicon li a i {
   font-size: 1.5rem;
   animation: title-color 3s ease-in-out infinite alternate-reverse;
 }
 
-footer .credit {
+foot-resto .credit {
   margin-top: 1rem;
 }
-footer .credit p {
+foot-resto .credit p {
   color: #000000;
 }
-footer .credit p a {
+foot-resto .credit p a {
   color: #0330f7;
   text-decoration: none;
 }
