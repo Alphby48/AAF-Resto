@@ -17,23 +17,23 @@
 body {
   font-family: "Poppins";
 }
-header app-bar {
+/* header app-bar {
   display: flex;
   align-items: center;
   gap: 40px;
   justify-content: center;
   background-color: aqua;
   padding: 1rem 0;
-}
+} */
 
-header app-bar img {
+/* header app-bar img {
   width: 100px;
-}
+} */
 
-header app-bar h2 {
+/* header app-bar h2 {
   font-family: "Poppins-Bold";
   font-size: 2.5rem;
-}
+} */
 
 main {
   background: url("asset/img/Screenshot\ 2023-12-31\ 155214.png"),
@@ -49,7 +49,7 @@ main {
   padding: 3rem;
   max-width: 100%;
 }
-main search-bar {
+/* main search-bar {
   width: 80%;
 }
 main .pencarian {
@@ -76,7 +76,7 @@ main .pencarian button {
 }
 main .pencarian button:active {
   background-color: rgb(94, 255, 0);
-}
+} */
 resto-list {
   display: flex;
   align-items: center;
