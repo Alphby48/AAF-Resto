@@ -47,13 +47,28 @@ class SearchBar extends HTMLElement {
       .pencarian button:active {
         background-color: rgb(94, 255, 0);
       }
+      @media(max-width: 400px){
+        :host{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          
+        }
+        .pencarian {
+          width: 90%;
+          gap: 10px;
+        }
+        .pencarian input {
+          width: 80%;
+        }
+      }
       </style>
         <div class="pencarian" id="pencarian">
         <input
           type="search"
           name=""
           id="kolomCari"
-          placeholder="cari makanan favorit anda"
+          placeholder="cth : corba"
         />
         <button id="tombolCari" type="submit">Cari</button>
       </div>

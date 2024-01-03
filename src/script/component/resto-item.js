@@ -1,11 +1,71 @@
 class RestoItem extends HTMLElement {
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({ mode: "open" });
+  }
   set resto(resto) {
     this._resto = resto;
     this.render();
   }
 
   render() {
-    this.innerHTML = `
+    this.shadowDOM.innerHTML = `
+    <style>
+    resto-list {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+    }
+    :host {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 90%;
+      margin-top: 1rem;
+    }
+    
+    .jdl-menu {
+      margin: 2rem;
+      font-size: 2rem;
+      color: aliceblue;
+    }
+    .info-resto {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+    .info-resto .menu-makanan {
+      width: 500px;
+      border-radius: 10px;
+    }
+    .descrip-resto {
+      color: rgb(255, 255, 255);
+      margin: 2rem 0;
+    }
+    .descrip-resto h3 {
+      margin-bottom: 1.1rem;
+      font-size: 1.6rem;
+    }
+    .descrip-resto p {
+      padding-left: 2rem;
+      text-indent: 2.5rem;
+    }
+    .komposisi {
+      color: rgb(255, 255, 255);
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+    .komposisi ul {
+      padding-left: 2.3rem;
+      margin-top: 1.1rem;
+      line-height: 1.6;
+    }
+    .komposisi ul li {
+      list-style: none;
+    }
+    </style>
         <h2 class="jdl-menu">${this._resto.strMeal}</h2>
         <div class="info-resto">
             <img class="menu-makanan" src="${this._resto.strMealThumb}" alt="Fan Art">

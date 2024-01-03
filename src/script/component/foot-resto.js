@@ -1,10 +1,73 @@
 class FootResto extends HTMLElement {
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({ mode: "open" });
+  }
+
   connectedCallback() {
     this.render();
   }
 
   render() {
-    this.innerHTML = `
+    this.shadowDOM.innerHTML = `
+    <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    </head>
+      <style>
+      
+      :host {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: aqua;
+        padding: 2rem 0;
+      }
+      .footicon {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        list-style: none;
+        margin-top: 2rem;
+      }
+      .footicon li a i {
+        font-size: 1.5rem;
+        animation: title-color 3s ease-in-out infinite alternate-reverse;
+      }
+      
+      .credit {
+        margin-top: 0.1rem;
+        margin-bottom: 1rem;
+      }
+      .credit p {
+        color: #000000;
+      }
+      .credit p a {
+        color: #0330f7;
+        text-decoration: none;
+      }
+      
+      @keyframes title-color {
+        0% {
+          color: #e90b0b;
+        }
+        25% {
+          color: #ee0cd0;
+        }
+        50% {
+          color: #0011ff;
+        }
+        100% {
+          color: #00ffdd;
+        }
+      }
+      </style>
+
       <ul class="footicon">
         <li>
           <a

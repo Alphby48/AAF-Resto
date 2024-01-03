@@ -31,6 +31,17 @@ class AppBar extends HTMLElement {
       font-family: "Poppins-Bold";
       font-size: 2.5rem;
     }
+    @media(max-width: 400px){
+      :host {
+        gap: 20px;
+      }
+      img{
+        width: 80px;
+      }
+      h2{
+        font-size: 1.5rem;
+      }
+    }
     </style>
     
     <img src="asset/img/resto aaf.png" alt="" />

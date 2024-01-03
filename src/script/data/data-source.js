@@ -10,7 +10,7 @@ class DataSource {
       if (filrest.length) {
         resolve(filrest);
       } else {
-        reject(`${keyword} tidak di temukan`);
+        reject(`kata '${keyword}' tidak di temukan`);
       }
     });
   }
