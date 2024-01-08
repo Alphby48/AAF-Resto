@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+main {
+  background: url("https://pbs.twimg.com/media/GDJNqs1aMAA35Gd?format=png&name=900x900"),
+    rgba(0, 0, 0, 0.781);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+  max-width: 100%;
+}
+
+@media (max-width: 400px) {
+  main {
+    padding: 2rem 0;
+  }
+}

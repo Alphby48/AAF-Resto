@@ -2,6 +2,18 @@ class RestoItem extends HTMLElement {
   constructor() {
     super();
     this.shadowDOM = this.attachShadow({ mode: "open" });
+
+    const font2 = document.createElement("link");
+    font2.href =
+      "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;1,200&display=swap";
+    font2.rel = "stylesheet";
+    document.head.appendChild(font2);
+
+    const font4 = document.createElement("link");
+    font4.href =
+      "https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Josefin+Sans:ital,wght@0,200;0,300;1,200&display=swap";
+    font4.rel = "stylesheet";
+    document.head.appendChild(font4);
   }
   set resto(resto) {
     this._resto = resto;
@@ -27,8 +39,9 @@ class RestoItem extends HTMLElement {
     
     .jdl-menu {
       margin: 2rem;
-      font-size: 2rem;
+      font-size: 3rem;
       color: aliceblue;
+      font-family: 'Caveat Brush', cursive;
     }
     .info-resto {
       display: flex;
@@ -47,10 +60,13 @@ class RestoItem extends HTMLElement {
     .descrip-resto h3 {
       margin-bottom: 1.1rem;
       font-size: 1.6rem;
+      font-family: 'Kalam', cursive;
     }
     .descrip-resto p {
       padding-left: 2rem;
       text-indent: 2.5rem;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 600;
     }
     .komposisi {
       color: rgb(255, 255, 255);
@@ -64,6 +80,16 @@ class RestoItem extends HTMLElement {
     }
     .komposisi ul li {
       list-style: none;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 600;
+    }
+    @media (max-width: 400px){
+      html{
+        font-size: 55%;
+      }
+      .info-resto .menu-makanan {
+        width: 90%;
+      }
     }
     </style>
         <h2 class="jdl-menu">${this._resto.strMeal}</h2>

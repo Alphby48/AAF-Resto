@@ -1,18 +1,18 @@
-import restos from "./restos.js";
-
 class DataSource {
   static cariMenu(keyword) {
-    return new Promise((resolve, reject) => {
-      const filrest = restos.filter((resto) =>
-        resto.strMeal.toUpperCase().includes(keyword.toUpperCase())
-      );
-
-      if (filrest.length) {
-        resolve(filrest);
-      } else {
-        reject(`kata '${keyword}' tidak di temukan`);
-      }
-    });
+    return fetch(
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${keyword}`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((responseJson) => {
+        if (responseJson.meals) {
+          return Promise.resolve(responseJson.meals);
+        } else {
+          return Promise.reject(`${keyword} is not found`);
+        }
+      });
   }
 }
 

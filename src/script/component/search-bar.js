@@ -2,6 +2,12 @@ class SearchBar extends HTMLElement {
   constructor() {
     super();
     this.shadowDOM = this.attachShadow({ mode: "open" });
+
+    const font3 = document.createElement("link");
+    font3.href =
+      "https://fonts.googleapis.com/css2?family=Kalam&family=Permanent+Marker&display=swap";
+    font3.rel = "stylesheet";
+    document.head.appendChild(font3);
   }
 
   connectedCallBack() {
@@ -34,7 +40,8 @@ class SearchBar extends HTMLElement {
         height: 40px;
         border-radius: 5px;
         padding: 5px;
-        font-family: "Poppins";
+        font-family: 'Kalam', cursive;
+        font-size: 1.2rem;
       }
       .pencarian button {
         height: 40px;
@@ -42,7 +49,7 @@ class SearchBar extends HTMLElement {
         border-radius: 5px;
         background-color: #00ffdd;
         font-size: 16px;
-        font-family: "Poppins";
+        font-family: 'Kalam', cursive;
       }
       .pencarian button:active {
         background-color: rgb(94, 255, 0);

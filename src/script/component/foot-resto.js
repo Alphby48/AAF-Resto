@@ -2,6 +2,12 @@ class FootResto extends HTMLElement {
   constructor() {
     super();
     this.shadowDOM = this.attachShadow({ mode: "open" });
+
+    const font1 = document.createElement("link");
+    font1.href =
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";
+    font1.rel = "stylesheet";
+    document.head.appendChild(font1);
   }
 
   connectedCallback() {
@@ -17,15 +23,18 @@ class FootResto extends HTMLElement {
     />
     </head>
       <style>
-      
+      *{
+        margin: 0;
+        padding: 0;
+      }
       :host {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        max-width: 100%;
         height: auto;
         background-color: aqua;
-        padding: 2rem 0;
+        
       }
       .footicon {
         width: 30%;
@@ -33,7 +42,7 @@ class FootResto extends HTMLElement {
         justify-content: space-around;
         text-decoration: none;
         list-style: none;
-        margin-top: 2rem;
+        margin: 2rem 0;
       }
       .footicon li a i {
         font-size: 1.5rem;
@@ -64,6 +73,11 @@ class FootResto extends HTMLElement {
         }
         100% {
           color: #00ffdd;
+        }
+      }
+      @media (max-width: 400px){
+        .footicon{
+          width: 90%;
         }
       }
       </style>
@@ -110,7 +124,7 @@ class FootResto extends HTMLElement {
         <p>
           Created by
           <a href="https://github.com/Alphby48" target="_blank"
-            >Aditya Ahfazh Firmansyah</a
+            >Aditya</a
           >. | &copy; 2024.
         </p>
       </div>

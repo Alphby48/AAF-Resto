@@ -2,6 +2,12 @@ class AppBar extends HTMLElement {
   constructor() {
     super();
     this.shadowDOM = this.attachShadow({ mode: "open" });
+
+    const font5 = document.createElement("link");
+    font5.href =
+      "https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap";
+    font5.rel = "stylesheet";
+    document.head.appendChild(font5);
   }
 
   connectedCallback() {
@@ -26,9 +32,10 @@ class AppBar extends HTMLElement {
     }
     img{
       width: 100px;
+      border-radius: 50%;
     }
     h2{
-      font-family: "Poppins-Bold";
+      font-family: 'Mochiy Pop One', sans-serif;
       font-size: 2.5rem;
     }
     @media(max-width: 400px){
@@ -44,7 +51,7 @@ class AppBar extends HTMLElement {
     }
     </style>
     
-    <img src="asset/img/resto aaf.png" alt="" />
+    <img src="https://pbs.twimg.com/media/GDJNQ2qbwAATMhU?format=jpg&name=large" alt="" />
     <h2>AAF Resto</h2>
         `;
   }

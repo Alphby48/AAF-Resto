@@ -34,6 +34,7 @@ class RestoList extends HTMLElement {
     .kata-salah {
       color: white;
       font-size: 1rem;
+      font-family: sans-serif;
     }
     </style>
     `;
